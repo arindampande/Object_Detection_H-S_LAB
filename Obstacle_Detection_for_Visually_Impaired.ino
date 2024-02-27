@@ -1,11 +1,5 @@
-// 27_EdgeImpulse_FOMO.ino
 #define MAX_RESOLUTION_VGA 1
 
-/**
- * Run Edge Impulse FOMO model on the Esp32 camera
- */
-
-// replace with the name of your library
 #include <esp32-cam-object-detection_inferencing.h>
 #include "esp32cam.h"
 #include "esp32cam/tinyml/edgeimpulse/FOMO.h"
@@ -22,11 +16,7 @@ void setup() {
     delay(3000);
     Serial.println("Init");
 
-    /**
-     * Replace with your camera model.
-     * Available: aithinker, m5, m5wide, wrover, eye, ttgoLCD
-     */
-    cam.aithinker();
+    cam.eye();
     cam.highQuality();
     cam.highestSaturation();
     cam.vga();
